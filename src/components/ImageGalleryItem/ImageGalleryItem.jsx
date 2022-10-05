@@ -15,10 +15,12 @@ export default function ImageGalleryItem({web, large}) {
     }
         
     return (
+        <>
         <GalleryItem onClick={openModal}>
             <GalleryItemImg src={web} loading="lazy" />
-            {isOpen && <ModalWindow large={large} onClose={closeModal} />}
         </GalleryItem>
+        {isOpen && <ModalWindow key={large} large={large} onClose={closeModal} />}
+        </>
     )
 
 }
