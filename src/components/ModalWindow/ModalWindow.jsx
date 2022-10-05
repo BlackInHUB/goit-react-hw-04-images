@@ -27,9 +27,6 @@ export default function ModalWindow({large, onClose}) {
         if (e.target === e.currentTarget) {
             onClose();
         }
-        // if (e.target.nodeName === 'DIV' ) {
-        //     onClose()
-        // }
     }
 
     return createPortal(
